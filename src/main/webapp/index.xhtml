@@ -3,7 +3,8 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="pt-br"
       xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
 
     <head>
         <title>Cadastro Cliente</title>
@@ -13,34 +14,39 @@
     <body>
         <div class="container-fluid">
             <h:form>
+                <h:messages showSummary="true"/>
+                
                 <div class="form-group">
-                    <label>Nome:</label>
-                    <h:inputText value ="#{clienteControle.cliente.nome} class="form-control" />
+                    <label>Nome</label>
+                    <h:inputText  class="form-control" />
                 </div>
 
                 <div class="form-group">
-                    <label>CPF:</label>
-                    <h:inputText value ="#{clienteControle.cliente.cpf}class="form-control" />
-                </div>
-
-                <div class="form-group">
-                    <label>Data Nascimento:</label>
+                    <label>CPF</label>
                     <h:inputText class="form-control" />
                 </div>
 
                 <div class="form-group">
-                    <label>Endereço:</label>
-                    <h:inputText value ="#{clienteControle.cliente.endereco} class="form-control" />
+                    <label>Data nascimento</label>
+                    <h:inputText value ="#{clienteControle.cliente.dataNascimento}" class ="form-control ">
+                        <f:convertDateTime pattern="dd/MM/yyy"/>
+                    </h:inputText>
+
                 </div>
 
                 <div class="form-group">
-                    <label>Cidade:</label>
-                    <h:inputText value ="#{clienteControle.cliente.cidade} class="form-control" />
+                    <label>Endereço</label>
+                    <h:inputText class="form-control" />
                 </div>
 
                 <div class="form-group">
-                    <label>Estado:</label>
-                    <h:selectOneMenu value ="#{clienteControle.cliente.estado} class="form-control"></h:selectOneMenu>
+                    <label>Cidade</label>
+                    <h:inputText class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label>Estado</label>
+                    <h:selectOneMenu class="form-control"></h:selectOneMenu>
                 </div>
 
                 <div class="form-check"> 
