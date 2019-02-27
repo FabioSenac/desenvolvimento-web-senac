@@ -1,6 +1,8 @@
 package com.github.braully.dws.controle;
 
 import com.github.braully.dws.modelo.Cliente;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import org.springframework.stereotype.Component;
 
 @Component
