@@ -68,6 +68,22 @@
 
                 <h:commandButton class="btn btn-primary" value="Salvar" />
             </h:form>
+           
+            <h:dataTable value="#{clienteControle.clientes}" var="clint">
+                <h:column>
+                    <f:facet name ="header ">Nome </f:facet>
+                    <h:outputText value ="#{clint.nome}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name ="header ">Cpf </f:facet >
+                    <h:outputText value ="#{clint.cpf}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name ="header">Date de Nascimento </f:facet>
+                    <h:outputText value ="#{clint.dataNascimento}"/>
+                </h:column>
+            </h:dataTable>
+        
         </div>
     </body>
 </html>
